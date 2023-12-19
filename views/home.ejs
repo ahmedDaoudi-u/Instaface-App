@@ -1,0 +1,45 @@
+
+
+<%- include("header") -%>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<%- include("body") -%>
+
+
+
+<h1>Genarating Analysis For Your Facebook & Intagram Pages</h1>
+<h2>Start By Providing The Following Info</h2>
+  <div class="container2"style="text-align: center; margin-top:150px;">
+
+<form class="" action="/" method="post">
+  <div class="form-group">
+    <label style="font-weight: bold;font-size: 18px">Your Short Access Token</label>
+    <input type="text" name="token" class="form-control" placeholder="Enter access token" style="font-size: 14px;">
+  </div>
+
+  <div class="form-group">
+    <label style="font-weight: bold;font-size: 18px">Your App ID</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" name="appid"placeholder="Enter app ID" style="font-size: 14px;width: 650px;">
+  </div>
+
+  <div class="form-group">
+    <label style="font-weight: bold;font-size: 18px">Your App Secret</label>
+    <input type="text" class="form-control" placeholder="Enter app secret" name="apps"style="font-size: 14px;">
+  </div>
+
+  <div style="text-align: center;">
+    <button type="submit" class="btn btn-primary" style="font-size: 16px;width: 120px;">Submit</button>
+  </div>
+  </form>
+
+  </div>
+
+  <textarea id="output" rows="5" readonly><%= ha %></textarea>
+  <% var ha="" %>
+
+
+
+ <%- include("footer") -%>

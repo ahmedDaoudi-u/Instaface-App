@@ -1,0 +1,243 @@
+
+<%- include("header") -%>
+<%- include("body") -%>
+<style>
+
+.custom-hr {
+  border: none;
+  height: 2px;
+  /* Set the height of the hr */
+  background-color: #007BFF;
+  /* Set the color of the hr */
+  width: 63%;
+  /* Set a specific width for the hr */
+  margin: 20px auto;
+  /* Center the hr horizontally and add margin above and below */
+}
+/* Custom styles for the dotted hr */
+.custom-dotted-hr {
+  height: 2px;
+  /* Set the height of the hr */
+  background-image: linear-gradient(to right, #007BFF 50%, transparent 50%);
+  /* Create a linear gradient with alternating color and transparent parts */
+  background-size: 30px 10px;
+  /* Set the size of each dot */
+  background-repeat: repeat;
+  width: 50%;
+  /* Repeat the dots to create the dotted effect */
+  margin: 20px auto;
+  /* Center the hr horizontally and add margin above and below */
+}
+@media print {
+      /* Adjust the graph size for printing */
+      .graph-container {
+        width: 100%;
+        height: auto;
+      }
+
+
+
+</style>
+<div id="resultPage">
+
+
+<h1>Your Ads Analysis Results</h1>
+
+
+
+
+ <div class="custom-hr"></div>
+<h2>Impressions Over Time 📉</h2>
+ <!-- Display the plot image -->
+ <div class="grid-container1">
+   <ul style="margin-top:100px; margin-right:70px;>
+  <li>📊 The scatter plot represents the trend of impressions over time.</li>
+  <li>📅 The X-axis displays the "AdSet Start Time," representing dates in a time-series format.</li>
+  <li>🔍 The Y-axis shows the corresponding "Impressions," indicating the number of impressions recorded at each date.</li>
+  <li>📍 Each data point on the scatter plot represents an observation at a specific time.</li>
+  <li>📈 The position of the point on the X-axis indicates the date of the AdSet Start Time, while the Y-axis position represents the number of impressions.</li>
+  <li>📌 The plot is designed to visualize the relationship between time and impressions, helping to identify patterns, trends, or fluctuations in the data.</li>
+  <li>🔵 Individual data points are indicated by blue markers on the plot, and the size of each marker represents the magnitude of the impression value.</li>
+  <li>🧐 Analyzing the distribution of points on the graph can reveal changes or trends in impressions over the given time period.</li>
+</ul>
+
+   <img class="plot-image" src="/uploads/plot10.png" alt="Impressions Over Time"style="margin-bottom:380px;">
+
+ </div>
+ <div class="custom-dotted-hr"></div>
+ <h2>CPC (Cost Per Click) Over Time 📉</h2>
+ <div class="grid-container graph-container">
+   <img class="plot-image" src="/uploads/plot11.png" alt="Impressions Over Time">
+   <ul style="margin-left:100px">
+  <li>📊 The line plot represents the trend of CPC (Cost Per Click) over time.</li>
+  <li>📅 The X-axis displays the "AdSet Start Time," representing dates in a time-series format.</li>
+  <li>💰 The Y-axis shows the corresponding "CPC," indicating the cost per click recorded at each date.</li>
+  <li>📍 Each data point on the line plot represents an observation at a specific time.</li>
+  <li>📈 The line connecting the data points represents the trend of CPC over the given time period.</li>
+  <li>📌 The plot is designed to visualize the changes in CPC over time, helping to identify patterns, trends, or fluctuations in the data.</li>
+  <li>🔵 Individual data points on the line plot represent the CPC values for specific dates.</li>
+
+</ul>
+
+ </div>
+ <div class="custom-dotted-hr"></div>
+ <h2>CPM (Cost Per Mille) & CPC (Cost Per Click) 📉</h2>
+ <div class="grid-container graph-container">
+   <ul style="margin-top:40px;margin-right:80px;">
+  <li>📊 The scatter plot shows the relationship between CPM (Cost Per Mille) and CPC (Cost Per Click).</li>
+  <li>🔵 Each data point on the plot represents a combination of CPM and CPC values.</li>
+  <li>📈 The plot is designed to visualize the correlation or pattern between CPM and CPC.</li>
+  <li>📌 The X-axis displays the "CPM," representing the cost per one thousand impressions of an ad.</li>
+  <li>🧮 The Y-axis shows the corresponding "CPC," indicating the cost per click for the same ad.</li>
+  <li>📍 Each data point's position represents a specific combination of CPM and CPC values.</li>
+  <li>🌐 The scatter plot allows us to understand if there's any relationship between the cost of impressions and the cost of clicks.</li>
+  <li>💡 Clusters or patterns of data points may indicate certain trends or insights, such as a higher CPC for lower CPM or vice versa.</li>
+  <li>📌 It helps advertisers and analysts understand the effectiveness and efficiency of their ad campaigns.</li>
+  <li>🔍 The scatter plot is useful for identifying potential opportunities or areas of improvement in advertising strategies.</li>
+</ul>
+   <img class="plot-image" src="/uploads/plot12.png" alt="Impressions Over Time">
+
+ </div>
+ <div class="custom-dotted-hr"></div>
+ <h2>Change In Both Impressions And CPC (Cost Per Click) Over Time 📉</h2>
+ <div class="grid-container graph-container">
+
+
+   <img class="plot-image" src="/uploads/plot13.png" alt="Impressions Over Time" style="margin-right:120px;">
+   <ul style="margin-top:10px;margin-left:30px;">
+  <li>📊 The line plot illustrates the percentage change in both impressions and CPC (Cost Per Click) over time.</li>
+  <li>📈 The plot shows how the metrics, % Δ Impressions and % Δ CPC, change as the AdSet Start Time progresses.</li>
+  <li>📌 The X-axis represents the "AdSet Start Time," which is the time when each ad campaign started.</li>
+  <li>🧮 The Y-axis displays the corresponding percentage change for each metric.</li>
+  <li>📈 The line graph has two lines, one for % Δ Impressions and another for % Δ CPC, distinguished by different markers.</li>
+  <li>📍 Each data point on the line graph represents the percentage change for a specific AdSet Start Time.</li>
+  <li>📈 The line plot allows us to analyze the trend and correlation between changes in impressions and CPC over time.</li>
+  <li>🌐 The plot helps advertisers and analysts understand how changes in CPC correspond to changes in impressions.</li>
+  <li>💡 Positive or negative trends in the lines indicate whether impressions and CPC are increasing or decreasing together.</li>
+  <li>📌 It allows us to identify periods of significant changes in ad performance based on the percentage shifts.</li>
+  <li>🔍 The line plot provides insights into the effectiveness of ad campaigns and helps optimize marketing strategies.</li>
+  <li>📊 The analysis of % change in impressions and CPC can lead to data-driven decisions for future advertising efforts.</li>
+</ul>
+
+ </div>
+ <div class="custom-dotted-hr"></div>
+ <h2>Distribution Of The "Total Cost" 📉</h2>
+ <div class="grid-container graph-container">
+   <ul style="margin-top:20px;margin-right:60px;">
+  <li>📊 The histogram plot represents the distribution of the "Total Cost" variable in the dataset.</li>
+  <li>📈 The plot visualizes the frequency or count of different cost ranges in the data.</li>
+  <li>📊 The X-axis corresponds to the "Total Cost," showing different cost values or intervals.</li>
+  <li>🧮 The Y-axis indicates the frequency or count of data points falling within each cost range.</li>
+  <li>📈 The plot is designed with 10 bins, which group the data into 10 cost intervals for analysis.</li>
+  <li>📌 Each bar in the histogram represents the number of occurrences within a specific cost range.</li>
+  <li>🔍 The histogram provides insights into the distribution of costs and helps identify patterns.</li>
+  <li>💡 It allows us to understand the concentration of costs around certain values or ranges.</li>
+  <li>📊 The analysis of the distribution of total costs can help in budget planning and optimization.</li>
+  <li>🌐 The plot helps advertisers and businesses understand the overall cost structure of their campaigns.</li>
+  <li>📌 It provides a visual summary of how costs are spread across different ranges or buckets.</li>
+  <li>💡 Outliers or skewed distributions in the histogram may indicate specific trends or issues.</li>
+  <li>📊 The insights from the histogram can guide decision-making for cost-effective advertising strategies.</li>
+  <li>🔎 Analysts can interpret the histogram to identify areas of cost-saving opportunities.</li>
+</ul>
+   <img class="plot-image" src="/uploads/plot14.png" alt="Impressions Over Time">
+
+ </div>
+ <div class="custom-dotted-hr"></div>
+<h2>Temporal Impression Insights: Evolving Campaign Performance Over Time</h2>
+ <div class="grid-container">
+
+   <img class="plot-image" src="/uploads/plot15.png" alt="Impressions Over Time">
+   <ul style="margin-top:60px;margin-left:120px;">
+  <li>📊 The scatter plot illustrates the distribution of "Impressions" over different time periods for advertising campaigns.</li>
+  <li>📈 Each point on the plot represents an advertising campaign and its corresponding number of impressions.</li>
+  <li>📊 The X-axis corresponds to the "AdSet Start Time," showing the timeline of different advertising campaigns.</li>
+  <li>🧮 The Y-axis indicates the number of "Impressions" generated by each advertising campaign.</li>
+  <li>📈 The red points highlight data from the latest year, providing insight into recent campaign performance.</li>
+  <li>📌 The green dashed line represents the average impressions across all campaigns, aiding in comparison.</li>
+  <li>🔍 The scatter plot allows quick identification of campaigns with high or low impressions in specific time periods.</li>
+  <li>💡 It helps in understanding trends in impressions, such as peak periods or lulls in campaign performance.</li>
+  <li>📊 The analysis of impressions over time aids in evaluating the effectiveness of advertising strategies.</li>
+  <li>🌐 Advertisers can make informed decisions about allocating resources based on time-specific impressions.</li>
+  <li>📌 Outliers or clusters of points can signify successful or challenging campaigns that require attention.</li>
+  <li>💡 Comparing latest year data against the average offers insights into recent campaign success.</li>
+  <li>📊 The scatter plot is a valuable tool for optimizing ad scheduling and maximizing campaign impact.</li>
+  <li>🔎 Analysts can glean insights into the relationship between time and impressions for strategic planning.</li>
+</ul>
+ </div>
+
+
+
+<div class="custom-dotted-hr"></div>
+<div class="">
+  <h2>Evolution of Average Accumulated Impressions for Ad Campaigns</h2>
+  <div class="grid-container">
+    <div  style="margin-top:0px;">
+      <img class="plot-image" src="/uploads/plot16.png" alt="Impressions Over Time">
+    </div>
+    <ul style="margin-top:50px;margin-left:120px;">
+    <li>📊 The scatter plot visualizes the trend of "Average Accumulated Impressions" over time for different advertising campaigns.</li>
+    <li>📈 Each point on the plot represents a specific time period, showing the average accumulated impressions up to that point.</li>
+    <li>📊 The X-axis corresponds to the "AdSet Start Time," indicating the progression of time for different ad campaigns.</li>
+    <li>🧮 The Y-axis reflects the average number of accumulated impressions at each time point.</li>
+    <li>📈 The plot showcases how the average accumulated impressions evolve over the entire period.</li>
+    <li>📌 Observing trends, spikes, or dips in the scatter plot can provide insights into the effectiveness of ad campaigns.</li>
+    <li>🔍 Points above the average line indicate periods with higher-than-average impressions, potentially signifying successful campaigns.</li>
+    <li>💡 Points below the average line may indicate opportunities for improvement or strategies to enhance ad performance.</li>
+    <li>📊 The analysis of average accumulated impressions helps in understanding the overall impact of campaigns over time.</li>
+    <li>🌐 Advertisers can identify periods of heightened or decreased engagement for informed decision-making.</li>
+    <li>📌 The scatter plot aids in evaluating the effectiveness of ad strategies and optimizing campaign scheduling.</li>
+    <li>💡 Comparing periods of high impressions with specific campaign strategies can guide future marketing efforts.</li>
+    <li>📊 The insights from the scatter plot inform strategies for maximizing impressions and optimizing advertising budgets.</li>
+    <li>🔎 Analysts can study trends in the plot to uncover patterns that influence ad campaign success or underperformance.</li>
+    <li>📊 The scatter plot empowers advertisers to make data-driven decisions for enhancing their ad campaign performance.</li>
+    <li>🌱 By adjusting strategies based on insights, businesses can aim to achieve more impactful and efficient ad campaigns.</li>
+  </ul>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+ <h2>End Of Analysis.</h2>
+ </div>
+ <div class="container3">
+   <button id="downloadButton" class="btn btn-primary" >Download PDF</button>
+ </div>
+
+   <!-- Load html2pdf.min.js from CDN -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <!-- Include Bootstrap JS -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+   <script>
+     // Add event listener to the button after the DOM is loaded
+     document.addEventListener('DOMContentLoaded', function () {
+       document.getElementById('downloadButton').addEventListener('click', generatePDF);
+     });
+
+     // Function to generate and download the PDF
+     function generatePDF() {
+       const element = document.getElementById('resultPage');
+
+       // Hide the download button before printing to avoid it appearing in the PDF
+       document.getElementById('downloadButton').style.display = 'none';
+
+       // Trigger the browser's print functionality to render the page as a PDF
+       window.print();
+
+       // Show the download button after printing is done
+       document.getElementById('downloadButton').style.display = 'block';
+
+       // Show success message
+       console.log('PDF download completed successfully!');
+     }
+   </script>
+
+
+
+
+<%- include("footer") -%>

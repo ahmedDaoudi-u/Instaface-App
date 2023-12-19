@@ -1,0 +1,313 @@
+<!-- analysisResults.ejs -->
+<!DOCTYPE html>
+<%- include("header") -%>
+<%- include("body") -%>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<head>
+  <title>Analysis Results</title>
+</head>
+<style>
+  .custom-hr {
+    border: none;
+    height: 2px;
+    /* Set the height of the hr */
+    background-color: #007BFF;
+    /* Set the color of the hr */
+    width: 63%;
+    /* Set a specific width for the hr */
+    margin: 20px auto;
+    /* Center the hr horizontally and add margin above and below */
+  }
+
+  /* Custom styles for the dotted hr */
+  .custom-dotted-hr {
+    height: 2px;
+    /* Set the height of the hr */
+    background-image: linear-gradient(to right, #007BFF 50%, transparent 50%);
+    /* Create a linear gradient with alternating color and transparent parts */
+    background-size: 30px 10px;
+    /* Set the size of each dot */
+    background-repeat: repeat;
+    width: 50%;
+    /* Repeat the dots to create the dotted effect */
+    margin: 20px auto;
+    /* Center the hr horizontally and add margin above and below */
+  }
+</style>
+
+<body>
+  <div id="resultPage">
+    <h1>Your Page Analysis Results </h1>
+    <h2>Page General Stats:</h2>
+
+    <h4>Total number of posts: <%= analysisResults.total_posts %>📊</h4>
+    <h4>Average number of likes per post: <%= analysisResults.average_likes %>👍</h4>
+    <h4>Average number of shares per post: <%= analysisResults.average_shares %>🔄</h4>
+    <h4>Average number of comments per post: <%= analysisResults.average_comments %>💬</h4>
+    <div class="custom-hr"></div>
+    <h2>Graphical Stats:</h2>
+    <div class="custom-dotted-hr"></div>
+    <h4>Distribution Of Likes</h4>
+    <div class="grid-container">
+      <img src="/uploads/plot.png" alt="Distribution of Likes">
+
+      <ul style="margin-top:50px; margin-right:40px;">
+        <li>📉 The x-axis shows the "Number of Likes," which represents the total number of likes received on each post.</li>
+        <li>📏 The y-axis shows the "Frequency," which indicates how many posts received a specific number of likes.</li>
+        <li>🗂️ The graph is divided into "bins" (20 bins in this case), which group the posts based on the number of likes they received.</li>
+        <li>🔵 Each bar represents a bin and shows how many posts fall into that bin based on the number of likes they received. The taller the bar, the more posts received that number of likes.</li>
+      </ul>
+
+    </div>
+    <div class="custom-dotted-hr"></div>
+    <h4>Distribution Of Comments</h4>
+    <div class="grid-container">
+      <ul style="margin-top:90px;margin-right:50px;">
+        <li>📉 The x-axis shows the "Number of Comments," which represents the total number of comments received on each post.</li>
+        <li>📏 The y-axis shows the "Frequency," which indicates how many posts received a specific number of comments.</li>
+        <li>🗂️ The graph is divided into "bins" (20 bins in this case), which group the posts based on the number of comments they received.</li>
+        <li>🔵 Each bar represents a bin and shows how many posts fall into that bin based on the number of comments they received. The taller the bar, the more posts received that number of comments.</li>
+      </ul>
+      <img src="/uploads/plot2.png" alt="Distribution of Comments">
+    </div>
+
+    <div class="custom-dotted-hr"></div>
+    <h4>Distribution Of Shares</h4>
+    <div class="grid-container">
+      <img src="/uploads/plot1.png" alt="Distribution of Shares">
+      <ul style="margin-top:90px;margin-right:50px;">
+        <li>📉 The x-axis shows the "Number of Shares," which represents the total number of shares received on each post.</li>
+        <li>📏 The y-axis shows the "Frequency," which indicates how many posts received a specific number of shares.</li>
+        <li>🗂️ The graph is divided into "bins" (20 bins in this case), which group the posts based on the number of shares they received.</li>
+        <li>🔵 Each bar represents a bin and shows how many posts fall into that bin based on the number of shares they received. The taller the bar, the more posts received that number of shares.</li>
+      </ul>
+    </div>
+
+
+    <div class="custom-dotted-hr"></div>
+    <h4>Engagement By Days Of The Week</h4>
+    <div class="grid-container">
+      <ul style="margin-top:30px;margin-right:50px;">
+        <li>
+          📊 The bar plot shows the "Engagement by Day of the Week" for your posts.
+        </li>
+        <li>
+          🔢 The x-axis represents the "Day of the Week," indicating the different days of the week (0 for Monday, 1 for Tuesday, and so on).
+        </li>
+        <li>
+          📊 The y-axis represents the "Engagement Count," showing the total engagement (likes, shares, and comments) received on each day of the week.
+        </li>
+        <li>
+          🟨 Each bar represents a specific day of the week, and the height of the bar corresponds to the total engagement count for that day.
+        </li>
+        <li>
+          📈 The plot allows you to compare the engagement levels across different days of the week to identify trends or patterns.
+        </li>
+        <li>
+          🌟 Days with higher bars indicate higher engagement on those days, while days with lower bars indicate relatively lower engagement.
+        </li>
+
+        <li>
+          🚀 Consider posting on days that have shown higher engagement to boost your content's visibility and audience reach.
+        </li>
+      </ul>
+      <img src="/uploads/plot4.png" alt="Distribution of Shares">
+    </div>
+
+    <div class="custom-dotted-hr"></div>
+    <h4>Engagement Trends Over Time</h4>
+    <div class="grid-container">
+      <img src="/uploads/plot3.png" alt="Distribution of Shares">
+      <ul style="margin-right:0px;margin-left:50px;">
+        <li>
+          📈 The line plot shows the "Engagement Trends over Time" for your posts.
+        </li>
+        <li>
+          📅 The x-axis represents the "Date," indicating the timeline when the posts were created.
+        </li>
+        <li>
+          📈 The y-axis represents the "Engagement Count," showing the total engagement (likes, shares, and comments) received by your posts on each specific date.
+        </li>
+        <li>
+          🔵 There are three lines on the plot, each representing the engagement count for different types of interactions: "Likes Count," "Shares Count," and "Comments Count."
+        </li>
+        <li>
+          🌟 The upward trend of the lines indicates an increase in engagement on specific dates, meaning your posts received more interactions from your audience.
+        </li>
+        <li>
+          ⚪ The downward trend of the lines indicates a decrease in engagement on specific dates, meaning your posts received fewer interactions from your audience.
+        </li>
+        <li>
+          💡 Analyzing the engagement trends over time can help you identify patterns and understand which posts perform better in terms of receiving likes, shares, and comments. This insight can guide you in optimizing your content strategy and
+          posting schedule to boost audience engagement and reach a wider audience.
+        </li>
+        <li>
+          🚀 Keep an eye on the peaks and valleys in the plot to spot exceptional posts and make data-driven decisions to enhance your social media presence.
+        </li>
+      </ul>
+
+    </div>
+    <div class="custom-dotted-hr"></div>
+    <h2>"Correlation Matrix" Of Engagement Metrics: Likes Count, Shares Count, and Comments Count</h2>
+    <div class="grid-container">
+      <ul style="margin-left:0px;margin-right:80px;">
+        <li>
+          📊 The heatmap displays the "Correlation Matrix" of engagement metrics: Likes Count, Shares Count, and Comments Count.
+        </li>
+
+        <li>
+          🔢 The correlation coefficient ranges from -1 to 1. Positive values indicate a positive correlation (direct relationship), while negative values indicate a negative correlation (inverse relationship).
+        </li>
+        <li>
+          🔴 A dark red shade indicates a strong positive correlation, meaning when one engagement metric increases, the other tends to increase as well.
+        </li>
+        <li>
+          🔵 A dark blue shade indicates a strong negative correlation, meaning when one engagement metric increases, the other tends to decrease.
+        </li>
+        <li>
+          ⚪ A light shade indicates a weak or no correlation between the engagement metrics.
+        </li>
+        <li>
+          💡 Analyzing the correlation between engagement metrics helps identify which metrics are related and how they influence each other.
+        </li>
+        <li>
+          📈 For example, if Likes Count and Shares Count show a strong positive correlation, it suggests that posts with more likes tend to be shared more often.
+        </li>
+        <li>
+          📉 On the other hand, if Comments Count and Shares Count show a strong negative correlation, it indicates that posts with more comments tend to be shared less frequently.
+        </li>
+
+      </ul>
+      <img src="/uploads/plot5.png" alt="Distribution of Shares">
+    </div>
+
+
+
+
+
+
+
+  <div class="custom-dotted-hr"></div>
+  <h2>Total Engagement Count Over Time</h2>
+  <div class="grid-container">
+     <img class="plot-image" src="/uploads/plot6.png" alt="Impressions Over Time">
+     <ul style="margin-right:0px;margin-left:50px; margin-top:30px;">
+  <li>📊 The graph represents the total engagement count over time for a dataset.</li>
+  <li>📅 X-axis: Dates or timestamps of recorded engagements.</li>
+  <li>📈 Y-axis: Total engagement count (likes*1 + shares*4 + comments*2).</li>
+  <li>📍 Each data point corresponds to a specific date and shows the total engagement count at that time.</li>
+  <li>🔗 Line connecting points indicates the trend of engagement over time.</li>
+  <li>❤️ Likes are given a weight of 1, ♻️ shares a weight of 4, and 💬 comments a weight of 2.</li>
+  <li>🔢 Total engagement is the sum of weighted counts for each data point.</li>
+  <li>📈 Upward trend suggests increasing interest and interactions.</li>
+  <li>📉 Flat/downward trend indicates stable or declining engagement.</li>
+  <li>🔑 Legend: 'Total Engagement' label for the plotted line.</li>
+    </ul>
+
+  </div>
+  <div class="custom-dotted-hr"></div>
+  <h2>The Engagement Count Over Time For The Latest Month</h2>
+  <div class="grid-container">
+       <img style="margin-right:100px;" class="plot-image" src="/uploads/plot7.png" alt="Impressions Over Time">
+    <ul style="margin-right:0px;margin-left:100px; margin-top:150px;">
+  <li>📊 The graph represents the engagement count over time for a dataset.</li>
+  <li>📅 X-axis: Dates or timestamps of recorded engagements.</li>
+  <li>📈 Y-axis: Total engagement count (sum of likes, shares, and comments).</li>
+  <li>📍 Each data point corresponds to a specific date and shows the total engagement count at that time.</li>
+  <li>🔗 Line connecting points indicates the trend of engagement over time.</li>
+  <li>❤️ Likes, ♻️ shares, and 💬 comments contribute to the total engagement count.</li>
+  <li>🔢 Total engagement is the sum of likes, shares, and comments for each data point.</li>
+  <li>📈 Upward trend suggests increasing overall engagement.</li>
+  <li>📉 Flat/downward trend indicates stable or declining engagement.</li>
+  <li>🔑 Legend: 'Engagement' label for the plotted line.</li>
+  <li>🔴 Red points represent the total engagement count for the latest month.</li>
+  <li>🟢 Green dashed line indicates the average engagement of previous months.</li>
+  <li>📝 Average: {average_engagement:.2f} - The average engagement count for past months, displayed near the plot.</li>
+</ul>
+
+
+  </div>
+<div class="custom-dotted-hr"></div>
+<h2>The Accumulated Engagement Count Over Time</h2>
+  <div class="grid-container">
+    <ul style="margin-right:100px;margin-left:0px; margin-top:150px;">
+  <li>📊 The graph represents the accumulated engagement count over time for a dataset.</li>
+  <li>📅 X-axis: Dates or timestamps of recorded engagements.</li>
+  <li>📈 Y-axis: Accumulated engagement count (sum of total engagements up to each data point).</li>
+  <li>📍 Each data point corresponds to a specific date and shows the total accumulated engagement up to that time.</li>
+  <li>🔗 Line connecting points indicates the trend of accumulated engagement over time.</li>
+  <li>❤️ Likes, ♻️ shares, and 💬 comments contribute to the total engagement count.</li>
+  <li>🔢 Accumulated engagement is the cumulative sum of likes, shares, and comments up to each data point.</li>
+  <li>📈 Upward trend suggests increasing overall accumulated engagement over time.</li>
+  <li>🔑 Legend: 'Accumulated Engagement' label for the plotted line.</li>
+</ul>
+<div  style="margin-top:0px;">
+  <img class="plot-image" src="/uploads/plot8.png" alt="Impressions Over Time">
+</div>
+
+  </div>
+  <div class="custom-dotted-hr"></div>
+  <h2> The Average Accumulated Engagement Count Over Time</h2>
+  <div class="grid-container">
+    <div  style="margin-top:0px;">
+      <img class="plot-image" src="/uploads/plot9.png" alt="Impressions Over Time">
+    </div>
+     <ul style="margin-right:0px;margin-left:100px; margin-top:150px;">
+  <li>📊 The graph represents the average accumulated engagement count over time for a dataset.</li>
+  <li>📅 X-axis: Dates or timestamps of recorded engagements.</li>
+  <li>📈 Y-axis: Average accumulated engagement count (average of total engagements up to each data point).</li>
+  <li>📍 Each data point corresponds to a specific date and shows the average accumulated engagement up to that time.</li>
+  <li>🔗 Line connecting points indicates the trend of average accumulated engagement over time.</li>
+  <li>❤️ Likes, ♻️ shares, and 💬 comments contribute to the total engagement count.</li>
+  <li>🔢 Average accumulated engagement is calculated by dividing the cumulative sum of likes, shares, and comments up to each data point by the index of that data point + 1.</li>
+  <li>📈 Upward trend suggests increasing overall average accumulated engagement over time.</li>
+  <li>🔑 Legend: 'Average Accumulated Engagement' label for the plotted line.</li>
+</ul>
+
+  </div>
+<div class="custom-dotted-hr"></div>
+<div class="container3">
+  <button id="downloadButton" class="btn btn-primary" >Download PDF</button>
+</div>
+
+<h2>End Of Analysis.</h2>
+
+
+  <!-- Load html2pdf.min.js from CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Include Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    // Add event listener to the button after the DOM is loaded
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('downloadButton').addEventListener('click', generatePDF);
+    });
+
+    // Function to generate and download the PDF
+    function generatePDF() {
+      const element = document.getElementById('resultPage');
+
+      // Hide the download button before printing to avoid it appearing in the PDF
+      document.getElementById('downloadButton').style.display = 'none';
+
+      // Trigger the browser's print functionality to render the page as a PDF
+      window.print();
+
+      // Show the download button after printing is done
+      document.getElementById('downloadButton').style.display = 'block';
+
+      // Show success message
+      console.log('PDF download completed successfully!');
+    }
+  </script>
+</body>
+
+
+
+</body>
+
+</html>
+<%- include("footer") -%>

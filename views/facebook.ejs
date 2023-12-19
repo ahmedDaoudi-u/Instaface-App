@@ -1,0 +1,103 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<%- include("header") -%>
+<%- include("body") -%>
+
+  <h1 >Analyse Your Facebook Data Here</h1>
+
+
+
+<head>
+  <style>
+    /* Custom styles for the divider */
+.custom-hr {
+  border: none;
+  height: 2px;
+  /* Set the height of the hr */
+  background-color: #007BFF;
+  /* Set the color of the hr */
+  width: 50%;
+  /* Set a specific width for the hr */
+  margin: 20px auto;
+  /* Center the hr horizontally and add margin above and below */
+}
+
+    /* Custom styles for the divider */
+    .divider {
+      border: none;
+      gap:20px;
+      border-top: 2px solid #007BFF;
+      /* Change the color and width as needed */
+      margin: 20px 0;
+      /* Adjust the margin to control spacing */
+    }
+  </style>
+
+
+</head>
+
+<div class="container5 ">
+
+  <form action="/Facebook" method="post" enctype="multipart/form-data">
+
+    <div class="form-group" style="text-align: center; margin-top:150px;">
+      <label style="font-weight: bold;font-size: 18px">Your Long Access Token</label>
+      <input type="text" name="longtoken" class="form-control" placeholder="Enter access token" style="font-size: 14px;width: 800px;">
+    </div>
+
+    <div class="form-group"style="text-align: center;">
+      <label style="font-weight: bold;font-size: 18px">Your App ID</label>
+      <input type="text" class="form-control" name="appID" placeholder="Enter app ID" style="font-size: 14px;width: 800px;">
+    </div>
+
+    <div style="text-align: center;">
+      <button type="submit" name="submit" class="btn btn-primary" style="font-size: 16px;width: 200px;" value="script1">Dowload The CSV File</button>
+
+    </div>
+
+    <hr class="divider">
+
+    <h2>Generate The Engagement Score Of The Page & Analysis</h2>
+
+    <div style="text-align: center;">
+      <h5>Choose your csv file</h5>
+
+      <button type="submit"name="submit" class="btn btn-primary" style="font-size: 16px;width: 200px;"value="script2">Calculate Engagement Rate</button>
+      <button type="submit" name="submit" class="btn btn-primary" style="font-size: 16px;width: 200px;" value="script">Check Your Page Analysis</button>
+
+
+    </div>
+    <div style="text-align: center; margin-bottom:30px">
+      <input placeholder="choose "type="file" name="csvFile" accept=".csv">
+    </div>
+
+    <div style="text-align: center;">
+      <h5>Choose Your CSV File About Ads</h5>
+      <h2>Generate Your Meta Ads Analysis</h2>
+      <h5>Choose your csv file</h5>
+      <button type="submit"name="submit" class="btn btn-primary" style="font-size: 16px;width: 200px;"value="script4">Check My Ads Analysis</button>
+        <hr class="divider">
+    </div>
+
+
+
+
+
+
+
+  </form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<%- include("footer") -%>
