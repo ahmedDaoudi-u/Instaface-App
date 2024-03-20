@@ -12,7 +12,7 @@ This documentation provides an overview of a small project aimed at generating i
 ### Step 2: Fetch data from Facebook using long token and generate the corresponding CSV file
 2. **Retrieval of Facebook Posts and Storage of Data in a CSV File:**
 
-The Long token will retrieve Facebook data, in our case the fields are: post ID, message, creation time, attachments, number of likes, reactions, shares, comments, views, and number of fans, was stored in a CSV file.
+The Long token will retrieve Facebook data, in our case the fields are: **post ID, message, creation time, attachments, number of likes, reactions, shares, comments, views, and number of fans**, were stored in a CSV file.
 
 3. **Calculation of Engagement Rate:**
    
@@ -43,6 +43,19 @@ Indentifaying the Words that attracted the most attention based on the content o
 8. **Identification of the Top Five Posts:**
     
 The top five posts of the Facebook page were determined based on specific criteria such as the number of likes, shares, or comments ;meaning the most successful posts in terms of engagement.
+## Process 2:
+### Step 1 : Getting the CSV file from Looker-studio for Ads analysis(Facebook & Instagram)
+Getting the appropriate fields for the CSV file : 
+### Step 2: Fetch data from Facebook using long token and generate the corresponding CSV file
+
+Facebook and Instagram Campaign Insights
+Evolution of Impressions Over Time 
+CPC (Cost Per Click) Over Time 
+CPM (Cost Per Mille) & CPC (Cost Per Click)
+Variation of Impressions and CPC Over Time 
+Distribution of "Total Cost" 
+Evolving Campaign Performance Over Time 
+Evolution of Average Cumulative Impressions for Advertising Campaigns
 
 # Video Demonstration
 
