@@ -45,17 +45,25 @@ Indentifaying the Words that attracted the most attention based on the content o
 The top five posts of the Facebook page were determined based on specific criteria such as the number of likes, shares, or comments ;meaning the most successful posts in terms of engagement.
 ## Process 2:
 ### Step 1 : Getting the CSV file from Looker-studio for Ads analysis(Facebook & Instagram)
-Getting the appropriate fields for the CSV file : 
+Getting the appropriate fields for the CSV file : **Campaign Name , Facebook Page ID, Instagram Page ID, Start Date and Time of Ad Set, End Date and Time of Ad Set, Facebook Post ID , Instagram Post ID , Impressions , % Δ CPM (Cost Per Mille), % Δ.1 CPC (Cost Per Click), % Δ.2 Total Cost, % Δ.3 Start Date and Time of Ad Set.**
+
 ### Step 2: Fetch data from Facebook using long token and generate the corresponding CSV file
 
-Facebook and Instagram Campaign Insights
-Evolution of Impressions Over Time 
-CPC (Cost Per Click) Over Time 
-CPM (Cost Per Mille) & CPC (Cost Per Click)
-Variation of Impressions and CPC Over Time 
-Distribution of "Total Cost" 
-Evolving Campaign Performance Over Time 
-Evolution of Average Cumulative Impressions for Advertising Campaigns
+1. **Facebook and Instagram Campaign Insights**
+
+2. **Evolution of Impressions Over Time**
+
+3. **CPC (Cost Per Click) Over Time**
+
+4. **CPM (Cost Per Mille) & CPC (Cost Per Click)**
+
+5. **Variation of Impressions and CPC Over Time** 
+
+6. **Distribution of "Total Cost**
+
+7. **Evolving Campaign Performance Over Time**
+
+8. **Evolution of Average Cumulative Impressions for Advertising Campaigns**
 
 # Video Demonstration
 
