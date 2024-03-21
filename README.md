@@ -14,7 +14,7 @@ This documentation provides an overview of a small project aimed at generating i
 
 The Long token will retrieve Facebook data, in our case the fields are:
 
-**post ID, message, creation time, attachments, number of likes, reactions, shares, comments, views, and number of fans**, were stored in a CSV file.
+**post ID, message, creation time, attachments, number of likes, reactions, shares, comments, views, and number of fans**.
 
 3. **Calculation of Engagement Rate:**
    
