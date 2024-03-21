@@ -1,6 +1,13 @@
 # Project Overview
 
-This documentation provides an overview of a small project aimed at generating insights from Facebook post data, calculating engagement rates, and analyzing various aspects of the data using visualisation.
+**The project aims to develop a web-based application that integrates data collection, analysis, and visualization tools to help businesses optimize their social media campaigns on Facebook and Instagram.**
+
+**The application will provide users with a comprehensive suite of tools to analyze and visualize data, enabling them to make informed decisions and improve their marketing strategies.** 
+
+**The project will utilize Node.js, Express.js, and Python to create a seamless user experience and enable users to explore data in depth.** 
+
+**The application will also offer features such as data token generation, campaign analysis, and visualization, making it an essential tool for businesses looking to stay ahead in the rapidly evolving world of social media marketing.**
+
 # The Complete steps for each process:
 
 ## Process 1:
