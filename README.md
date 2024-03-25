@@ -8,6 +8,9 @@
 
 **The application will also offer features such as data token generation, campaign analysis, and visualization, making it an essential tool for businesses looking to stay ahead in the rapidly evolving world of social media marketing.**
 
+Before you start applying the steps of the projects , you first need to set up your meta business account so that you can get the credentials used to scarp the data:
+check this link for the detailed documentation : https://developers.facebook.com/docs/facebook-login/guides/access-tokens
+
 # The Complete steps for each process:
 
 ## Process 1:
